@@ -15,13 +15,11 @@ Works on **qb-core**, **Qbox**, **ESX**, or fully **standalone**.
 ## Table of Contents
 
 - [Features](#features)
-- [Screenshots](#screenshots)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Door Lock Creator](#door-lock-creator)
-- [Browser Dev Mode](#browser-dev-mode)
 - [Building the UI](#building-the-ui)
 - [Server Exports](#server-exports)
 - [Project Structure](#project-structure)
@@ -280,29 +278,6 @@ A universal workflow for building door lock config entries without hand-writing 
 
 ---
 
-## Browser Dev Mode
-
-Run the UI in a normal browser with all FiveM calls mocked. Ideal for development, theming, and taking clean screenshots.
-
-```bash
-cd ui
-npm install
-npm run dev
-```
-
-Open **http://localhost:5173/** — every panel is populated with mock data and fully interactive.
-
-### Taking screenshots for this README
-
-1. Run `npm run dev` and open the local URL.
-2. Navigate to the tab you want to capture.
-3. Take a screenshot:
-   - **Windows:** `Win + Shift + S`
-   - **macOS:** `Cmd + Shift + 4`
-4. Save to `docs/images/` as `dashboard.png`, `raycast.png`, `doorlocks.png`, etc.
-5. Stop the dev server with `Ctrl + C` when done.
-
----
 
 ## Building the UI
 
