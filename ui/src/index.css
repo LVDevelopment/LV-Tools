@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: transparent;
+}
+
+/*
+ * Browser dev-mode backdrop (never applied inside FiveM).
+ * A moody, multi-glow scene so the translucent panel reads as real glass,
+ * matching how the toolkit floats over the game world in-game. This gives
+ * clean, representative screenshots for docs.
+ */
+body.dev-mode {
+  background:
+    radial-gradient(1100px 620px at 18% 12%, rgba(59, 130, 246, 0.20), transparent 60%),
+    radial-gradient(900px 520px at 88% 82%, rgba(20, 184, 166, 0.16), transparent 55%),
+    radial-gradient(760px 760px at 72% 22%, rgba(139, 92, 246, 0.14), transparent 60%),
+    radial-gradient(520px 520px at 40% 90%, rgba(37, 99, 235, 0.12), transparent 55%),
+    linear-gradient(135deg, #0a0d13 0%, #0f131c 45%, #090f18 100%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@layer components {
+  .lv-btn {
+    @apply px-3 py-1.5 rounded-lg text-sm font-medium transition-all
+      bg-white/[0.04] border border-white/10 text-gray-200
+      hover:bg-white/[0.09] hover:border-lv-accent/40 active:scale-[0.98];
+  }
+
+  .lv-btn-primary {
+    @apply lv-btn bg-lv-accent/90 border-lv-accent text-white hover:bg-lv-accent;
+  }
+
+  .lv-card {
+    @apply bg-white/[0.035] border border-white/10 rounded-xl p-3.5;
+  }
+
+  .lv-input {
+    @apply w-full px-3 py-2 rounded-lg text-sm bg-black/20 border border-white/10
+      text-gray-200 placeholder-lv-muted focus:outline-none focus:border-lv-accent/60;
+  }
+
+  .lv-title {
+    @apply text-base font-semibold tracking-tight text-gray-100;
+  }
+
+  .lv-subtle {
+    @apply text-xs text-lv-muted;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

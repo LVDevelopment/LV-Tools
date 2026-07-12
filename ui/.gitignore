@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+*.log
+
+# NOTE: dist/ is intentionally committed so the resource works without a build step.
+# If you prefer to build on deploy, add "dist/" here and run `npm run build`.

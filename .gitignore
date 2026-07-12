@@ -1,0 +1,12 @@
+# Dependencies
+ui/node_modules/
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Local data written at runtime (keep the folder, ignore generated files)
+data/*.json
+!data/zones.json
